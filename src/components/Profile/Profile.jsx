@@ -1,34 +1,46 @@
 import React from 'react';
 
+import {
+  Card,
+  Avatar,
+  Description,
+  UserName,
+  Tag,
+  Stats,
+  Label,
+  Quantity
+
+} from './Profile.styled';
+
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img
+    <Card className="profile">
+      <Description>
+        <Avatar
           src={avatar}
           alt="User avatar"
           className="avatar"
         />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+        <UserName>{username}</UserName>
+        <Tag>@{tag}</Tag>
+        <Tag>{location}</Tag>
+      </Description>
 
-      <ul className="stats">
+      <Stats>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <Label className="label">Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <Label className="label">Views</Label>
+          <Quantity>{stats.views}</Quantity>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <Label className="label">Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
         </li>
-      </ul>
-    </div>
+      </Stats>
+    </Card>
   );
 };
 

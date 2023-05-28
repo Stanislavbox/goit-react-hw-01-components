@@ -1,7 +1,7 @@
 import React from 'react';
 import {StatisticTitle, StatisticsCard, StatisticsList, StatisticsItem } from './Statistics.styled';
 
-export const Statistics = ({ stats, title }) => {
+const Statistics = ({ stats, title }) => {
   return (
     <StatisticsCard>
       {title && <StatisticTitle>{title}</StatisticTitle>}
@@ -19,3 +19,5 @@ export const Statistics = ({ stats, title }) => {
     </StatisticsCard>
   );
 };
+
+export default Statistics;

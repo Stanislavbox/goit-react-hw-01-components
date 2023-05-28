@@ -23,8 +23,28 @@ export const StatisticsCard = styled.section`
 `;
 export const StatisticsList = styled.ul`
   display: flex;
+  gap: 12px;
+
+  margin-top: 40px;
+
   font-size: 24px;
 `;
 export const StatisticsItem = styled.li`
-  color: random;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 80px;
+
+  color: #fff;
+
+`;
+export const StatisticsPercentage = styled.span`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 80px;
 `;

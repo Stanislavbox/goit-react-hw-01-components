@@ -1,13 +1,21 @@
-import { ColorGreen, ColorRed } from "./FriendListItem.styled";
+import PropTypes from 'prop-types';
+import { ColorGreen, ColorRed, FriendItem, StatusItem, StatusImage, UserName } from "./FriendListItem.styled";
 
 const FriendListItem =({id, name, avatar, isOnline}) =>{
   return (
-    <li className="item" key={id}>
-      <span className="status">{isOnline ? <ColorGreen/> : <ColorRed/>}</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
-    </li>
+    <FriendItem key={id}>
+      <StatusItem>{isOnline ? <ColorGreen/> : <ColorRed/>}</StatusItem>
+      <StatusImage className="avatar" src={avatar} alt={name} width="48" />
+      <UserName>{name}</UserName>
+    </FriendItem>
   )
 }
+
+FriendListItem.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};
 
 export default FriendListItem;

@@ -9,8 +9,13 @@ export const Card = styled.div`
   margin-bottom: var(--ifm-leading);
   max-width: 480px;
   padding: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  background-color: #fff;
+  background-color: #fff;  
+
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 `
 export const Description = styled.div`
   text-align: center;
@@ -23,11 +28,14 @@ width: 120px;
 height: 120px;
 
 margin: auto;
+
+background-color: gray;
 border-radius: 50%;
 `
 export const UserName = styled.p`
   color: #000;
   font-size: 40px;
+  margin-top: 24px;
 `
 export const Tag = styled.p`
   color: grey;
@@ -36,6 +44,7 @@ export const Tag = styled.p`
 export const Stats = styled.ul`
   display: flex;
   justify-content: space-around;
+  margin-top: 24px;
 
   padding: 0;
 
